@@ -1,0 +1,284 @@
+/* LET US PUT SOME SET UP TO START */
+:root{
+    --color-page-background: #0F103F;
+    
+    font-size: 15px;
+}
+
+*,::after,::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+img,picture{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* HERE WE GO. WE'LL DO A MOBILE FIRST CODING FLOW */
+
+body{
+    background: url(images/crystal_rock.png) no-repeat top left,
+                var(--color-page-background);  
+    /* padding: .5rem 1rem; */
+    padding: .5rem 10vw ;
+    overflow-x: hidden;
+}
+
+@keyframes show {
+    to{
+        opacity: 1;
+        height: 30vh;
+    }
+}
+header{
+    position: relative;
+    min-height: 7em;
+}
+header figure{
+    width: 10rem;
+    height: 7em;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+header nav, header label{
+    position: absolute;
+    width: 2.4em;
+    height: 2em;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url(images/menu_hamburger.png) no-repeat center ;
+}
+header label{
+    z-index: 1;
+}
+header #opener{display: none;}
+header #opener:checked +label+nav ul{
+    display: block;
+}
+header nav ul{
+    position: absolute;
+    top: 110%;
+    right: 0em;
+    background-color: #06071bd6;
+    text-align: center;
+    padding-block: 1rem;
+    animation: show 1.5s forwards;
+    width: 90vw;
+    height: 0px;
+    overflow: hidden;
+    display: none;
+    opacity: 0;
+}
+header nav ul li{
+    list-style-type: none;
+    color: white;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: .1rem;
+}
+#sidenav{
+    display: none;
+}
+
+/* *********************************************************************************** */
+/* *********************************************************************************** */
+/* *********************************************************************************** */
+/* *********************************************************************************** */
+
+#home{
+    margin-top: 10rem;
+    min-height: 25rem;
+    background: url(images/crystal_pyramid.png) no-repeat bottom 3rem right , url(images/pyramid_shadow.png) no-repeat bottom right;
+    background-size: min(50vw, 25rem);
+    /* border: 1px solid orange; */
+
+}
+#home h1{
+    font-size: 1.8em;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: .12rem;
+    position: relative;
+}
+#home ul{
+    margin-top: 1rem;
+    max-width: 28em;
+    /* border: 1px solid orange; */
+}
+#home ul li{
+    color: white;
+    display: inline;
+    list-style-type: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 2rem;
+}
+#home button{
+    margin-top: 2.5rem;
+    padding: .5rem 2rem;
+    font-size: 1.3em;
+    outline: none;
+    border: none;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    background-blend-mode: overlay;
+    background: linear-gradient(96.34deg, rgba(255, 255, 255, 0.6) 0%, #000000 100%);
+    background: #FFFFFF4D;
+
+}
+/* *********************************************************************************** */
+/* *********************************************************************************** */
+/* *********************************************************************************** */
+/* *********************************************************************************** */
+
+#about{
+    margin-top: 8rem;
+    text-align: center;
+}
+#about aside, #about figure{
+    display: inline-block;
+    vertical-align: middle;
+}
+#about aside{
+    background-color: white;
+    padding: 10%;
+    text-align: justify;
+    text-align-last: center;
+    border-radius: 0 0 140px 140px;
+    max-width: max(50%,470px);
+}
+@media screen and (min-width: 900px) {
+    #about aside{
+        padding: 5%;
+    }
+    
+}
+#about h2{
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+#about aside p{
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+#about figure{
+    width: 40%;
+    position: relative;
+    bottom: 60px;
+}
+@media only screen and (min-width: 987px){
+    #about figure{
+        left: 15%;
+    }
+    #about{
+        position: relative;
+        right: 15%;
+    }
+}
+#about figure img:last-of-type{
+    width: 50%;
+}
+/* *********************************************************************************** */
+/* *********************************************************************************** */
+/* *********************************************************************************** */
+/* *********************************************************************************** */
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 1024px){
+    /* body{
+        padding: 1rem 10vw ;
+    } */
+    header{
+        min-height: 7em; /* should be the same height of the figure */
+    }
+    header figure{
+        width: 8rem;
+        height: 7em;
+    }
+    header nav, header label{
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        transform: none;
+        background: none;
+    }
+    header label{
+        z-index: 1;
+        display: none;
+    }
+    header nav ul{
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        text-align: unset;
+        padding-block: 0;
+        animation: none;
+        opacity: 1;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        gap: min(8vw, 8rem);
+    }
+    header nav ul li{
+        margin-bottom: 0;
+        font-size: .91em;
+    }
+    header nav ul li:nth-of-type(2){
+        margin-right: 8rem;
+    }
+    header nav ul li:nth-of-type(3){
+        margin-left: 8rem;
+    }
+
+    /* *************************************************************** */
+    /* *************************************************************** */
+    /* *************************************************************** */
+    #home{
+        font-size: 20px;
+        background: none;
+        position: relative;
+    }
+    #home::after{
+        content: "";
+        position: absolute;
+        /* inset: 0; */
+        width: 100%;
+        height: 100%;
+        background: url(images/crystal_pyramid.png) no-repeat bottom right
+                    /*, url(images/ellipse_bg.svg) no-repeat bottom -5rem right */;
+        background-size: min(50vw, 25rem)/*, 30rem*/;
+        top: 0;
+        left: 8.2rem;
+        /* border: 1px solid red; */
+
+    }
+
+    /* *************************************************************** */
+    /* *************************************************************** */
+    /* *************************************************************** */
+
+
+   
+    
+}
