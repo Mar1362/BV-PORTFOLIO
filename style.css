@@ -9,6 +9,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    border: none;
+    outline: none;        
 }
 img,picture{
     width: 100%;
@@ -227,6 +229,86 @@ header nav ul li{
     font-size: 1.2rem;
     padding-block: .5rem;
 }
+/* *********************************************************************************** */
+/* *********************************************************************************** */
+/* *********************************************************************************** */
+/* *********************************************************************************** */
+
+#contact{
+    margin-top: 15rem;
+
+}
+#contact form{
+    text-align: center;
+    position: relative;
+}
+.field, .wrapper{
+    margin-top: 2rem;
+    text-align: center;
+}
+.field, .wrapper{
+    position: relative;
+    width: max-content;
+    margin-inline: auto ;
+}
+.field label, .wrapper label {
+    color: white;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    position: absolute;
+    left: 1rem; /*should be the same as the padding inline of the input*/
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .3s ease ;
+}
+.wrapper label{
+    top: 1rem;
+}
+.field input:focus + label,
+.field input:not(:placeholder-shown) + label,
+.wrapper textarea:focus + label,
+.wrapper textarea:not(:placeholder-shown) + label{
+    color: lightgray;
+    top: -25%;
+    font-size: .8rem;
+    font-weight: lighter;
+
+}
+.wrapper textarea:focus + label,
+.wrapper textarea:not(:placeholder-shown) + label{
+    top: -.7rem;
+}
+.field input, .wrapper textarea{
+    padding: .5rem 1rem;
+    width: min(30rem, 80vw);
+    border-bottom: 2px solid gray;
+    background-color: rgba(180, 183, 211, 0.226);
+    border-radius: 25px;
+    color: white;
+    letter-spacing: .08rem   ;
+    font-size: 1rem;
+}
+
+
+.wrapper textarea{
+    min-height: 15rem;
+    text-align: justify;
+    resize: vertical;
+}
+.wrapper input{
+    width: 8rem;
+    height: 2rem;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.15rem;
+    background-color: rgb(22, 105, 26);
+    cursor: pointer;
+    position: absolute;
+    left: calc(50% - (min(30rem, 80vw) / 2));
+    bottom: -1rem;
+}
+
 
 
 

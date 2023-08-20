@@ -80,11 +80,23 @@
 
     <section id="contact">
         <form action="#" method="post">
-            <input type="text" name="name">
-            <input type="mail" name="email">
-            <input type="text" name="subject">
-            <textarea name="message"></textarea>
-            <input type="submit" value="SEND">
+            <div class="field">
+              <input placeholder=" " type="text" name="name" id="name">
+              <label for="name">NAME</label>
+            </div> 
+
+            <div class="field">
+              <input placeholder=" " type="mail" name="email" id="email">
+              <label for="email">EMAIL</label>
+            </div>
+
+            <div class="field">
+              <input placeholder=" " type="text" name="subject">
+              <label for="subject">SUBJECT</label>
+            </div>
+
+            <div class="wrapper"><textarea placeholder=" " name="message" id="message"></textarea> <label for="message">MESSAGE</label></div>
+            <div class="wrapper"><input type="submit" value="SEND"></div>
         </form>
     </section>
 
