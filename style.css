@@ -29,8 +29,9 @@ body{
     background: url(images/crystal_rock.png) no-repeat top left,
                 var(--color-page-background);  
     /* padding: .5rem 1rem; */
-    padding: .5rem 10vw ;
+    padding: .5rem 10vw 0 10vw;
     overflow-x: hidden;
+    position: relative ;
 }
 
 @keyframes show {
@@ -308,10 +309,38 @@ header nav ul li{
     left: calc(50% - (min(30rem, 80vw) / 2));
     bottom: -1rem;
 }
-
-
-
-
+/* *********************************************************************************** */
+/* *********************************************************************************** */
+/* *********************************************************************************** */
+/* *********************************************************************************** */
+footer{
+    margin-top: 25rem;
+    background-color: #060850;
+    text-align: center;
+    padding: 1rem 0 0 0;
+    box-shadow: 0 0 0 100vmax  #060850;
+    clip-path: inset(0 -100vmax);
+}
+footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style-type: none;
+}
+footer ul li a img, footer p img{
+    max-width: 30px;
+}
+footer p{
+    color: white;
+    margin-top: .8rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+footer p img{
+    width: 1rem;
+    margin-right: .5rem;
+    vertical-align: middle;
+}
 
 
 
