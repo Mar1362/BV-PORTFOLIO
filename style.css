@@ -114,7 +114,7 @@ header nav ul li{
     margin-top: 10rem;
     min-height: 25rem;
     background: url(images/crystal_pyramid.png) no-repeat bottom 3rem right , url(images/pyramid_shadow.png) no-repeat bottom right;
-    background-size: min(50vw, 25rem);
+    background-size: min(40vw, 18rem);
     /* border: 1px solid orange; */
 
 }
@@ -178,7 +178,7 @@ header nav ul li{
     text-align: justify;
     text-align-last: center;
     border-radius: 0 0 140px 140px;
-    max-width: max(50%,470px);
+    max-width: max(40%,470px);
 }
 @media screen and (min-width: 900px) {
     #about aside{
@@ -202,11 +202,11 @@ header nav ul li{
 }
 @media only screen and (min-width: 987px){
     #about figure{
-        left: 15%;
+        left: 13%;
     }
     #about{
         position: relative;
-        right: 15%;
+        right: 10%;
     }
 }
 #about figure img:last-of-type{
@@ -223,8 +223,8 @@ header nav ul li{
 }
 #portfolio aside{
     display: inline-block;
-    height: max(10rem, 30vw);
-    width: max(10rem, 30vw);
+    height: max(10rem, 18vw);
+    width: max(10rem, 18vw);
     margin: 2vw;
     border-radius: 10px;
     position: relative;
@@ -459,29 +459,29 @@ footer p img{
     }
     #portfolio aside{
         display: block;
-        height: 15rem;
-        width: 15rem;
+        height: 14rem;
+        width: 14rem;
         margin: 0;
         position: absolute;
         
     }
     #portfolio aside:nth-child(1){
-        top: 50%;
-        scale: .9;
+        top: 48%;
+        scale: .8;
     }
     #portfolio aside:nth-child(2){
         bottom: 0%;
-        left: 50%;
+        left: 45%;
     }
     #portfolio aside:nth-child(3){
         right: 0;
         top: 25%;
-        scale: .9;
+        scale: .7;
     }
     #portfolio aside:nth-child(4){
-        top: 0;
-        left: 30%;
-        scale: .7;
+        top: 0%;
+        left: 15%;
+        scale: .5;
     }
     #portfolio aside h2{font-size: 1.4rem;}
    
