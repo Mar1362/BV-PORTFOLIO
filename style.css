@@ -448,6 +448,8 @@ footer p img{
         background-size: contain;    
         position: relative;
         min-height: 95vh;
+        perspective: 100px;
+        transform-style: preserve-3d;
     }
     #portfolio::after{
         content: "";
@@ -475,7 +477,7 @@ footer p img{
     }
     #portfolio aside:nth-child(3){
         right: 0;
-        top: 25%;
+        top: 40%;
         scale: .7;
     }
     #portfolio aside:nth-child(4){
